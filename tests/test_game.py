@@ -14,6 +14,7 @@ class TestGame(unittest.TestCase):
         self.game_2 = Game(self.player_3, self.player_2)
         self.game_3 = Game(self.player_3, self.player_1)
         self.game_4 = Game(self.player_1, self.player_4)
+        self.game_5 = Game(self.player_1, self.player_5)
     
     def test_game_has_players(self):
         self.assertEqual("Andrew", self.game_1.player_1.name)
@@ -30,3 +31,6 @@ class TestGame(unittest.TestCase):
 
     def test_draw(self):
         self.assertEqual("It's a draw!", self.game_4.play_game())
+
+    def test_invalid_game(self):
+        self.assertEqual("Please input a valid game", self.game_5.play_game())
