@@ -12,4 +12,5 @@ def play_game(player1move, player2move):
     player1 = Player("Player 1", player1move)
     player2 = Player("Player 2", player2move)
     game = Game(player1, player2)
-    return game.play_game()
+    result = game.play_game()
+    return render_template("index.html", result = result)
