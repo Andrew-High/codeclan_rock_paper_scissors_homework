@@ -5,17 +5,17 @@ class Game:
 
     def play_game(self):
         if self.player_1.move == "rock" and self.player_2.move == "scissors":
-            return "Player 1 wins by playing rock!"
+            return f"{self.player_1.name} wins by playing rock!"
         elif self.player_1.move == "rock" and self.player_2.move == "paper":
-            return "Player 2 wins by playing paper!"
+            return f"{self.player_2.name} wins by playing paper!"
         elif self.player_1.move == "scissors" and self.player_2.move == "paper":
-            return "Player 1 wins by playing scissors!"
+            return f"{self.player_1.name} wins by playing scissors!"
         elif self.player_1.move == "scissors" and self.player_2.move == "rock":
-            return "Player 2 wins by playing rock!"
+            return f"{self.player_2.name} wins by playing rock!"
         elif self.player_1.move == "paper" and self.player_2.move == "rock":
-            return "Player 1 wins by playing paper!"
+            return f"{self.player_1.name} wins by playing paper!"
         elif self.player_1.move == "paper" and self.player_2.move == "scissors":
-            return "Player 2 wins by playing scissors!"
+            return f"{self.player_2.name} wins by playing scissors!"
         elif self.player_1.move == self.player_2.move:
             return "It's a draw!"
         else:

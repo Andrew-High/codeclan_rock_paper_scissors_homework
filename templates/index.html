@@ -10,6 +10,23 @@
     <h1>Rock Paper Scissors Game</h1>
     <hr>
     <br>
+    <form class="form-inline" action="/game" method="POST">
+
+    <label for="player1name">Player 1 name:</label>
+    <input type="text" name="player1name" id="player1name">
+
+    <label for="player1move">Player 1 enter your gesture here:</label>
+    <input type="text" name="player1move" id="player1move">
+
+    <label for="player2name">Player 2 name:</label>
+    <input type="text" name="player2name" id="player2name">
+
+    <label for="player2move">Player 2 enter your gesture here:</label>
+    <input type="text" name="player2move" id="player2move">
+
+    <input type="submit" value="Play Game!">
+    
+    </form>
     <p>Result: {{result}}</p>
 </body>
 </html>

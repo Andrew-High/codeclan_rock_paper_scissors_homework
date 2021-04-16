@@ -21,13 +21,13 @@ class TestGame(unittest.TestCase):
         self.assertEqual("Simon", self.game_1.player_2.name)
 
     def test_scissors_wins_against_paper(self):
-        self.assertEqual("Player 1 wins by playing scissors!", self.game_1.play_game())
+        self.assertEqual("Andrew wins by playing scissors!", self.game_1.play_game())
 
     def test_paper_wins_against_rock(self):
-        self.assertEqual("Player 2 wins by playing paper!", self.game_2.play_game())
+        self.assertEqual("Simon wins by playing paper!", self.game_2.play_game())
 
     def test_rock_wins_against_scissors(self):
-        self.assertEqual("Player 1 wins by playing rock!", self.game_3.play_game())
+        self.assertEqual("Richard wins by playing rock!", self.game_3.play_game())
 
     def test_draw(self):
         self.assertEqual("It's a draw!", self.game_4.play_game())
