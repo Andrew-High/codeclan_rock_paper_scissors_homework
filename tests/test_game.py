@@ -13,3 +13,6 @@ class TestGame(unittest.TestCase):
     def test_game_has_players(self):
         self.assertEqual("Andrew", self.game.player_1.name)
         self.assertEqual("Simon", self.game.player_2.name)
+
+    def test_scissors_wins(self):
+        self.assertEqual("Player 1 wins!", self.game.play_game(self.player_1, self.player_2))
