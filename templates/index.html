@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors Game</title>
-</head>
-<body>
-    <h1>Rock Paper Scissors Game</h1>
-    <hr>
-    <br>
+{% extends "base.html" %}
+{% block content %}
     <h2>Welcome to my Rock Paper Scissors game!</h2>
     <h3>Rules:</h3>
     <ul>
@@ -20,37 +10,7 @@
         <li>Scissors beats Paper</li>
         <li>Paper beats Rock</li>
     </ul>
-    <h3>Play against a friend</h3>
-    <form class="form-inline" action="/game" method="POST">
-
-        <label for="player1name">Player 1 name:</label>
-        <input type="text" name="player1name" id="player1name">
-
-        <label for="player1move">Player 1 enter your gesture here:</label>
-        <input type="text" name="player1move" id="player1move">
-
-        <label for="player2name">Player 2 name:</label>
-        <input type="text" name="player2name" id="player2name">
-
-        <label for="player2move">Player 2 enter your gesture here:</label>
-        <input type="text" name="player2move" id="player2move">
-
-        <input type="submit" value="Play Game!">
-    
-    </form>
-    <br>
-    <h3>Play against the computer</h3>
-    <form class="form-inline" action="/game" method="POST">
-
-        <label for="player1name">Player 1 name:</label>
-        <input type="text" name="player1name" id="player1name">
-    
-        <label for="player1move">Player 1 enter your gesture here:</label>
-        <input type="text" name="player1move" id="player1move">
-
-        <input type="submit" value="Play Game!">
-    
-    </form>
-    <h2>Result: {{result}}</h2>
-</body>
-</html>
+    <p>Choose a game type:</p>
+    <a href="/game/single_player">Single Player</a>
+    <a href="/game/two_player">Two Players</a>
+    {%endblock%}

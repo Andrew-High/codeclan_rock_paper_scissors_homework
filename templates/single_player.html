@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Play against the computer</h3>
+<form class="form-inline" action="/game/single_player" method="POST">
+
+    <label for="player1name">Player 1 name:</label>
+    <input type="text" name="player1name" id="player1name">
+
+    <label for="player1move">Player 1 enter your gesture here:</label>
+    <input type="text" name="player1move" id="player1move">
+
+    <input type="submit" value="Play Game!">
+</form>
+<br>
+<br>
+<br>
+<h2>Result: {{result}}</h2>
+{%endblock%}
